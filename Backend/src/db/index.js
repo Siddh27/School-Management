@@ -17,7 +17,6 @@ const pool = mysql2.createPool({
 // Function to check if the table exists and create it if not
 export async function initializeDatabase() {
     try {
-        
         // Check if the table exists
         const [rows] = await pool.query(`
             SELECT table_name
